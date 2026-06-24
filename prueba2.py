@@ -47,12 +47,13 @@ def agregar_reserva(lista_r):
         "confirmada" : False
     }
 
-    lista_r.apped(reserva)
+    lista_r.append(reserva)
     print("Reserva agregada correctamente")
+    return
 
-def buscar_reserva(lista_r,huesped):
-    for x in range(len(lista_r))
-        if huesped == lista_r[x]["huesped"]:
+def buscar_reserva(lista_r,nombre_r):
+    for x in range(len(lista_r)):
+        if nombre_r.strip().upper() == lista_r[x]["huesped"].strip().upper():
             return x       
     return -1
 
@@ -89,12 +90,7 @@ def validar_noches(noches):
         return validar > 0
     return False
 
-#codigo principal
-op = 0
-while op != 6:
-    mostrar_menu()
 
-    op = ingresar_opcion()
 
 
 
